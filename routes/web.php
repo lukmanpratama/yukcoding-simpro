@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.guest');
-});
+Route::get('/', \App\Livewire\Guest\Beranda::class)->name('guest.beranda');
+Route::get('/tentang', \App\Livewire\Guest\Tentang::class)->name('guest.tentang');
+Route::get('/harga', \App\Livewire\Guest\Harga::class)->name('guest.harga');
