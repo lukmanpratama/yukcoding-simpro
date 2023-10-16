@@ -25,7 +25,7 @@
                   <a href="/harga" wire:navigate class="nav-link {{ (request()->is('harga')) ? 'active' : '' }} ">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#team">Team</a>
+                  <a href="/portofolio" wire:navigate class="nav-link {{ (request()->is('portofolio')) ? 'active' : '' }} ">Portofolio</a>
                 </li>
                 <li class="nav-item">
                   <a href="#contact">Contact</a>
@@ -72,10 +72,10 @@
             </div>
 
             <div class="navbar-btn d-none d-sm-inline-block">
-              <a href="login.html" class="ud-main-btn ud-login-btn">
+              <a href="/login" wire:navigate class="ud-main-btn {{ (request()->is('login')) ? 'ud-white-btn' : 'ud-login-btn' }} ">
                 Sign In
               </a>
-              <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">
+              <a href="/registrasi" wire:navigate class="ud-main-btn {{ (request()->is('registrasi')) ? 'ud-white-btn' : 'ud-login-btn' }} ">
                 Sign Up
               </a>
             </div>
