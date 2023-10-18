@@ -22,16 +22,16 @@
             <div class="ud-login-logo">
               <img src="assets/images/logo/logo-2.svg" alt="logo" />
             </div>
-            <form class="ud-login-form">
+            <form wire:submit="login" class="ud-login-form">
               <div class="ud-form-group">
-                <input
+                <input wire:model="email"
                   type="email"
                   name="email"
                   placeholder="Email/username"
                 />
               </div>
               <div class="ud-form-group">
-                <input
+                <input wire:model="password"
                   type="password"
                   name="password"
                   placeholder="*********"
@@ -68,7 +68,7 @@
               Forget Password?
             </a>
             <p class="signup-option">
-              Not a member yet? <a href="javascript:void(0)"> Sign Up </a>
+              Not a member yet? <a href="/registrasi"  wire:navigate> Sign Up </a>
             </p>
           </div>
         </div>

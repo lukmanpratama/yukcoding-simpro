@@ -94,6 +94,11 @@
     <script src="{{ asset('landingpage/assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('landingpage/assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('landingpage/assets/js/main.js') }}"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js'></script>
+    <script>
+        $('#nohp').inputmask("9999 9999 99999")
+    </script>
     <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");

@@ -37,3 +37,4 @@ Route::group(['middleware' => ['auth', 'cekrole:pemilik']], function(){
     Route::get('/pemilik', \App\Livewire\Pemilik\Beranda::class)->name('pemilik.beranda');
     Route::get('/pemilik/proyek', \App\Livewire\Pemilik\Proyek::class)->name('pemilik.proyek');
 });
+

@@ -8,7 +8,7 @@
 
 ======== */
 /*===========================
-  COMMON css 
+  COMMON css
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
@@ -1684,7 +1684,7 @@ p {
   margin-bottom: 25px;
 }
 
-.ud-login-form .ud-form-group input {
+.ud-login-form .ud-form-group input,select,textarea {
   width: 100%;
   border: 2px solid #dddddd;
   border-radius: 4px;
@@ -1695,6 +1695,14 @@ p {
 
 .ud-login-form .ud-form-group input:focus {
   border-color: var(--primary-color);
+}
+
+.ud-login-form .ud-form-group select:focus {
+    border-color: var(--primary-color);
+}
+
+.ud-login-form .ud-form-group textarea:focus {
+    border-color: var(--primary-color);
 }
 
 .ud-socials-connect {
