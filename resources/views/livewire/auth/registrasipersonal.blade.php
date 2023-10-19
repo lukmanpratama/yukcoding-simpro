@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ud-banner-content">
-                        <h1>Login Page</h1>
+                        <h1>Registrasi Personal</h1>
                     </div>
                 </div>
             </div>
@@ -22,12 +22,42 @@
                         <div class="ud-login-logo">
                             <img src="assets/images/logo/logo-2.svg" alt="logo" />
                         </div>
-                        <form wire:submit="login" class="ud-login-form">
+                        <form wire:submit="registrasi" class="ud-login-form">
                             <div class="ud-form-group">
-                                <input wire:model="email" type="email" name="email" placeholder="Email" />
+                                <input type="username" name="name" placeholder="Username" />
                             </div>
                             <div class="ud-form-group">
-                                <input wire:model="password" type="password" name="password" placeholder="Password" />
+                                <input type="email" name="email" placeholder="Email" />
+                            </div>
+                            <div class="ud-form-group">
+                                <input type="password" name="password" placeholder="Password" />
+                            </div>
+                            <div class="ud-form-group">
+                                <select name="" id="">
+                                    <option value="">Provinsi</option>
+                                </select>
+                            </div>
+                            <div class="ud-form-group">
+                                <select name="" id="">
+                                    <option value="">Kab/Kota</option>
+                                </select>
+                            </div>
+                            <div class="ud-form-group">
+                                <select name="" id="">
+                                    <option value="">Kecamatan</option>
+                                </select>
+                            </div>
+                            <div class="ud-form-group">
+                                <select name="" id="">
+                                    <option value="">Kel/Desa</option>
+                                </select>
+                            </div>
+                            <div class="ud-form-group">
+                                <textarea type="password" name="password" placeholder="Alamat"></textarea>
+                            </div>
+                            <div class="ud-form-group">
+                                <input type="tel" id="nohp" name="nohp"
+                                    placeholder="No Hp xxxx-xxxx-xxxx" />
                             </div>
                             <div class="ud-form-group">
                                 <button type="submit" class="ud-main-btn w-100">Login</button>
@@ -55,12 +85,8 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <a class="forget-pass" href="javascript:void(0)">
-                            Forget Password?
-                        </a>
                         <p class="signup-option">
-                            Not a member yet? <a href="/registrasi" wire:navigate> Sign Up </a>
+                            Have a member yet? <a href="/login" wire:navigate> Sign In </a>
                         </p>
                     </div>
                 </div>
@@ -68,4 +94,5 @@
         </div>
     </section>
     <!-- ====== Login End ====== -->
+
 </div>

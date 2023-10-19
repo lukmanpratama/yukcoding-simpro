@@ -2036,7 +2036,8 @@ p {
 }
 
 .ud-blog-details-content {
-  padding-top: 60px;
+  padding-top: 5px;
+  padding-bottom: 50px;
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1920px), only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -2046,6 +2047,7 @@ p {
 }
 
 .ud-blog-details-title {
+    color: #ffffff;
   font-weight: 700;
   font-size: 35px;
   line-height: 50px;
@@ -2063,10 +2065,12 @@ p {
   .ud-blog-details-title {
     font-size: 30px;
     line-height: 40px;
+    color: #ffffff;
   }
 }
 
 .ud-blog-details-para {
+    color: #ffffff;
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 30px;
