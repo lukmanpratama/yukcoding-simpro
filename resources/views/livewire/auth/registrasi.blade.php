@@ -2,7 +2,7 @@
     <section class="ud-hero" id="home">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <div class="ud-blog-details-content wow fadeInUp" data-wow-delay=".2s"">
                         <h2 class="ud-blog-details-title">
                             Facing a challenge is kind of a turn-on for an easy rider
@@ -41,7 +41,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <div class="ud-login-wrapper">
                         <div class="ud-login-logo">
                             <h3 class="ud-newsletter-title">Join our newsletter!</h3>

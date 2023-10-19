@@ -234,8 +234,8 @@
                                 <div class="user-box">
                                     <div class="avatar-lg"><img src="{{ asset('dashboard/assets/img/profile.jpg') }}" alt="image profile" class="avatar-img rounded"></div>
                                     <div class="u-text">
-                                        <h4>Hizrian</h4>
-                                        <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                        <h4>{{Auth::user()->name}}</h4>
+                                        <p class="text-muted">{{Auth::user()->email}}</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                     </div>
                                 </div>
                             </li>
@@ -247,7 +247,10 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Account Setting</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <form action="{{route('auth.logout')}}" method="post">
+                                    @csrf
+                                    <button class="dropdown-item" type="submit">Log Out</button>
+                                </form>
                             </li>
                         </div>
                     </ul>

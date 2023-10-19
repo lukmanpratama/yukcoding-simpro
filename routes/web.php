@@ -20,6 +20,7 @@ Route::get('/portofolio', \App\Livewire\Guest\Portofolio::class)->name('guest.po
 
 Route::get('/login', \App\Livewire\Auth\Login::class)->name('auth.login');
 Route::get('/registrasi', \App\Livewire\Auth\Registrasi::class)->name('auth.registrasi');
+Route::post('/logout', action: \App\Http\Controllers\LogoutController::class)->name('auth.logout');
 
 Route::group(['middleware' => ['auth', 'cekrole:admin']], function(){
     Route::get('/admin', \App\Livewire\Admin\Beranda::class)->name('admin.beranda');
