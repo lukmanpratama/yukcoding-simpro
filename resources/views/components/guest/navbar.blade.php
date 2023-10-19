@@ -4,7 +4,7 @@
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="/" wire:navigate>
-              <img src="{{ asset('landingpage/assets/images/logo/logo.svg') }}" alt="Logo" />
+              <img src="{{ asset('landingpage/assets/images/logo/logoyk2.png') }}" alt="Logo" />
             </a>
             <button class="navbar-toggler">
               <span class="toggler-icon"> </span>

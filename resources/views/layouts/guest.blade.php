@@ -61,8 +61,8 @@
     <!--====== Favicon Icon ======-->
     <link
       rel="shortcut icon"
-      href="{{ asset('landingpage/assets/images/favicon.svg') }}"
-      type="image/svg"
+      href="{{ asset('landingpage/assets/images/yukcoding.ico') }}"
+      type="image/svg/x-icon"
     />
 
     <!-- ===== All CSS files ===== -->
