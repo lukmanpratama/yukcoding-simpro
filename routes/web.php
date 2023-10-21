@@ -18,8 +18,8 @@ Route::get('/tentang', \App\Livewire\Guest\Tentang::class)->name('guest.tentang'
 Route::get('/harga', \App\Livewire\Guest\Harga::class)->name('guest.harga');
 Route::get('/portofolio', \App\Livewire\Guest\Portofolio::class)->name('guest.portofolio');
 
-Route::get('/login', \App\Livewire\Auth\Login::class)->name('auth.login');
-Route::get('/registrasi', \App\Livewire\Auth\Registrasi::class)->name('auth.registrasi');
+Route::get('/login', \App\Livewire\Auth\Login::class)->name('auth.login')->middleware('guest');
+Route::get('/registrasi', \App\Livewire\Auth\Registrasi::class)->name('auth.registrasi')->middleware('guest');
 Route::post('/logout', action: \App\Http\Controllers\LogoutController::class)->name('auth.logout');
 
 Route::group(['middleware' => ['auth', 'cekrole:admin']], function(){

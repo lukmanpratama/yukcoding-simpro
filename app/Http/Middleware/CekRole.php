@@ -18,6 +18,6 @@ class CekRole
         if(in_array($request->user()->role,$levels)){
             return $next($request);
         }
-        return redirect()->route('login');
+        return redirect()->route('auth.login');
     }
 }
