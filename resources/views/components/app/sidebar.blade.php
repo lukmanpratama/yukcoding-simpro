@@ -36,7 +36,18 @@
                     </div>
                 </div>
             </div>
+            @if (auth()->user()->role=="admin")
             <x-app.menu.admin/>
+            @endif
+            @if (auth()->user()->role=="manajer")
+            <x-app.menu.manajer/>
+            @endif
+            @if (auth()->user()->role=="pemilik")
+            <x-app.menu.pemilik/>
+            @endif
+            @if (auth()->user()->role=="tim")
+            <x-app.menu.tim/>
+            @endif
         </div>
     </div>
 </div>
