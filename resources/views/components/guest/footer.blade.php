@@ -14,7 +14,7 @@
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="ud-widget">
               <a href="index.html" class="ud-footer-logo">
-                <img src="{{ asset('landingpage/assets/images/logo/logo.svg') }}" alt="logo" />
+                <img src="{{ asset('landingpage/assets/images/logo/yk logo 2.png') }}" alt="logo" />
               </a>
               <p class="ud-widget-desc">
                 We create digital experiences for brands and companies by

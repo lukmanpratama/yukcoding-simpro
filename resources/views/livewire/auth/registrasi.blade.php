@@ -48,21 +48,35 @@
                         </div>
                         <form wire:submit="registrasi" class="ud-login-form">
                             <div class="ud-form-group">
-                                <input type="username" name="name" placeholder="Username" />
+                                <input wire:model="nama" type="username" name="name" placeholder="Username">
+                                @error('nama')
+                                <small class="d-block mt-1 danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="ud-form-group">
-                                <input type="email" name="email" placeholder="Email" />
+                                <input wire:model="email" type="email" name="email" placeholder="Email">
+                                @error('email')
+                                    <small class="d-block mt-1 danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="ud-form-group">
-                                <input type="password" name="password" placeholder="Password" />
+                                <input wire:model="password" type="password" name="password" placeholder="Password">
+                                @error('password')
+                                    <small class="d-block mt-1 danger">{{ $message }}</small>
+                                @enderror
                             </div>
-
                             <div class="ud-form-group">
-                                <textarea type="alamat" name="alamat" placeholder="Alamat"></textarea>
+                                <textarea wire:model="alamat" type="alamat" name="alamat" placeholder="Alamat"></textarea>
+                                @error('alamat')
+                                    <small class="d-block mt-1 danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="ud-form-group">
-                                <input type="tel" id="nohp" name="nohp"
-                                    placeholder="No Hp xxxx-xxxx-xxxx" />
+                                <input wire:model="nohp" type="tel"  name="nohp"
+                                    placeholder="No Hp xxxx-xxxx-xxxx">
+                                @error('nohp')
+                                    <small class="d-block mt-1 danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="ud-form-group">
                                 <button type="submit" class="ud-main-btn w-100">Daftar</button>

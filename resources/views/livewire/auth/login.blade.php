@@ -48,10 +48,10 @@
                         </div>
                         <form wire:submit="login" class="ud-login-form">
                             <div class="ud-form-group">
-                                <input wire:model="email" type="email" name="email" placeholder="Email" />
+                                <input wire:model="email" type="email" name="email" placeholder="Email">
                             </div>
                             <div class="ud-form-group">
-                                <input wire:model="password" type="password" name="password" placeholder="Password" />
+                                <input wire:model="password" type="password" name="password" placeholder="Password">
                             </div>
                             <div class="ud-form-group">
                                 <button type="submit" class="ud-main-btn w-100">Login</button>
