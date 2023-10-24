@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="{{ asset('dashboard/assets/css/atlantis.min.css') }}">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link rel="stylesheet" href="{{ asset('dashboard/assets/css/demo.css') }}">
+
 </head>
 <body>
 	<div class="wrapper">
@@ -156,8 +156,7 @@
 	<script src="{{ asset('dashboard/assets/js/atlantis.min.js') }}"></script>
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="{{ asset('dashboard/assets/js/setting-demo.js') }}"></script>
-	<script src="{{ asset('dashboard/assets/js/demo.js') }}"></script>
+
 	<script>
 		Circles.create({
 			id:'circles-1',
