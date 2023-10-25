@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth', 'cekrole:tim']], function(){
 });
 Route::group(['middleware' => ['auth', 'cekrole:pemilik']], function(){
     Route::get('/pemilik', \App\Livewire\Pemilik\Beranda::class)->name('pemilik.beranda');
-    Route::get('/pemilik/proyek', \App\Livewire\Pemilik\Proyek::class)->name('pemilik.proyek');
+    Route::get('/pemilik/proyek', \App\Livewire\Pemilik\ProyekPemilik::class)->name('pemilik.proyek');
     Route::get('/pemilik/proyek/tugas', \App\Livewire\Pemilik\Tugas::class)->name('pemilik.tugas');
     Route::get('/pemilik/proyek/kalender', \App\Livewire\Pemilik\Kalender::class)->name('pemilik.kalender');
     Route::get('/pemilik/rapat', \App\Livewire\Pemilik\Rapat::class)->name('pemilik.rapat');

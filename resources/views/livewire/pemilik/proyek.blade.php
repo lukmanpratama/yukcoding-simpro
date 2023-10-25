@@ -55,13 +55,19 @@
                                     <div class="modal-body">
                                         <p class="small">Create a new row using this form, make sure you fill them all
                                         </p>
-                                        <form>
+                                        <form wire:submit.prevent="{{ $proyekId ? 'update' : 'store' }}">
                                             <div class="row">
                                                 <div class="col-sm-12">
                                                     <div class="form-group form-group-default">
-                                                        <label>Name</label>
-                                                        <input id="addName" type="text" class="form-control"
-                                                            placeholder="fill name">
+                                                        <label>Name Proyek</label>
+                                                        <input wire:model="nama_proyek" type="text" class="form-control"
+                                                            placeholder="nama proyek">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <div class="form-group form-group-default">
+                                                        <label>Deskripsi Proyek</label>
+                                                        <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="deskripsi proyek"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 pr-0">
