@@ -12,7 +12,7 @@
                     <i class="flaticon-right-arrow"></i>
                 </li>
                 <li class="nav-item {{ request()->is('pemilik/proyek/tugas') ? 'primary' : '' }}">
-                    <a href="/pemilik/proyek/tugas" wire:navigate>Base</a>
+                    <a href="/pemilik/proyek/tugas" wire:navigate>Proyek</a>
                 </li>
                 <li class="separator">
                     <i class="flaticon-right-arrow"></i>
@@ -28,7 +28,7 @@
                     <div class="card-header">
                         <div class="d-flex align-items-center">
                             <h4 class="card-title">Add Row</h4>
-                            <button class="btn btn-primary btn-round ml-auto" data-toggle="modal"
+                            <button wire:click="create" class="btn btn-primary btn-round ml-auto" data-toggle="modal"
                                 data-target="#addRowModal">
                                 <i class="fa fa-plus"></i>
                                 Add Row
@@ -37,16 +37,13 @@
                     </div>
                     <div class="card-body">
                         <!-- Modal -->
+                        @if ($isOpen)
                         <div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header no-bd">
                                         <h5 class="modal-title">
-                                            <span class="fw-mediumbold">
-                                                New</span>
-                                            <span class="fw-light">
-                                                Row
-                                            </span>
+                                            {{$proyekId ? 'Edit Proyek' : 'Create Proyek' }}
                                         </h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
@@ -67,21 +64,18 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group form-group-default">
                                                         <label>Deskripsi Proyek</label>
-                                                        <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="deskripsi proyek"></textarea>
+                                                        <textarea wire:model="deskripsi_proyek" class="form-control" name="" id="" cols="30" rows="10" placeholder="deskripsi proyek"></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 pr-0">
+                                                <div class="col-sm-12">
                                                     <div class="form-group form-group-default">
-                                                        <label>Position</label>
-                                                        <input id="addPosition" type="text" class="form-control"
-                                                            placeholder="fill position">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group form-group-default">
-                                                        <label>Office</label>
-                                                        <input id="addOffice" type="text" class="form-control"
-                                                            placeholder="fill office">
+                                                        <label>Jenis Proyek</label>
+                                                        <select wire:model="jenis_proyek" name="" id="" class="form-control select">
+                                                            <option value="Website">Website</option>
+                                                            <option value="Web App">Web App</option>
+                                                            <option value="Android App">Android App</option>
+                                                            <option value="Ios App">Ios App</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -95,6 +89,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group row">
@@ -139,7 +134,7 @@
                                 </tfoot>
                                 <tbody>
                                     <tr>
-                                        <td>Tiger Nixon</td>
+                                        <td><a href="">Proyek A</a></td>
                                         <td>System Architect</td>
                                         <td>Edinburgh</td>
                                         <td>
