@@ -48,7 +48,7 @@ class ProyekPemilik extends Component
         $this->validate();
         $proyek = Proyek::create([
             'nama_proyek' => $this->nama_proyek,
-            'jenis-proyek' => $this->jenis_proyek,
+            'jenis_proyek' => $this->jenis_proyek,
             'deskripsi_proyek' => $this->deskripsi_proyek,
             'status_proyek' => 'to do',
         ]);
