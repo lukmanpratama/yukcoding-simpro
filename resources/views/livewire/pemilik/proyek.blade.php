@@ -1,20 +1,14 @@
 <div class="content">
     <div class="page-inner">
         <div class="page-header">
-            <h4 class="page-title">Avatars</h4>
+            <h4 class="page-title">Proyek</h4>
             <ul class="breadcrumbs">
                 <ul class="nav nav-line nav-color-secondary">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
+                        <a class="nav-link" href="/pemilik" wire:navigate>Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link active" href="/pemilik/proyek" wire:navigate>Proyek</a>
                     </li>
                 </ul>
             </ul>
