@@ -31,6 +31,11 @@
                                     <img src="{{ asset('storage/foto/'.Auth::user()->foto) }}" alt="..." class="avatar-img rounded-circle">
                                 </div>
                             </div>
+                            <div class="col-md-8">
+                                <h4><b>Nama Pengguna</b></h4>
+                                <p>{{Auth::user()->name}}</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
