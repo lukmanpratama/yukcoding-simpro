@@ -25,7 +25,13 @@
                         </div>
                     </div>
                     <div class="card-body">
-
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="avatar avatar-xxl">
+                                    <img src="{{ asset('storage/foto/'.Auth::user()->foto) }}" alt="..." class="avatar-img rounded-circle">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
