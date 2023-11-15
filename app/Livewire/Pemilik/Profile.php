@@ -4,10 +4,10 @@ namespace App\Livewire\Pemilik;
 
 use Livewire\Component;
 
-class Tugas extends Component
+class Profile extends Component
 {
     public function render()
     {
-        return view('livewire.pemilik.tugas');
+        return view('livewire.pemilik.profile');
     }
 }

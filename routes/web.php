@@ -24,11 +24,15 @@ Route::post('/logout', action: \App\Http\Controllers\LogoutController::class)->n
 
 Route::group(['middleware' => ['auth', 'cekrole:admin']], function(){
     Route::get('/admin', \App\Livewire\Admin\Beranda::class)->name('admin.beranda');
+    Route::get('/admin/pengguna', \App\Livewire\Admin\Pengguna::class)->name('admin.pengguna');
     Route::get('/admin/proyek', \App\Livewire\Admin\Proyek::class)->name('admin.proyek');
+    Route::get('/admin/pembayaran', \App\Livewire\Admin\Pembayaran::class)->name('admin.pembayaran');
+    Route::get('/admin/profile', \App\Livewire\Admin\Profile::class)->name('admin.profile');
 });
 Route::group(['middleware' => ['auth', 'cekrole:manajer']], function(){
     Route::get('/manajer', \App\Livewire\Manajer\Beranda::class)->name('manajer.beranda');
     Route::get('/manajer/proyek', \App\Livewire\Manajer\Proyek::class)->name('manajer.proyek');
+    Route::get('/manajer/profile', \App\Livewire\Manajer\Profile::class)->name('manajer.profile');
 });
 Route::group(['middleware' => ['auth', 'cekrole:tim']], function(){
     Route::get('/tim', \App\Livewire\Tim\Beranda::class)->name('tim.beranda');
@@ -38,10 +42,11 @@ Route::group(['middleware' => ['auth', 'cekrole:pemilik']], function(){
     Route::get('/pemilik', \App\Livewire\Pemilik\Beranda::class)->name('pemilik.beranda');
     Route::get('/pemilik/proyek', \App\Livewire\Pemilik\ProyekPemilik::class)->name('pemilik.proyek');
     Route::get('/pemilik/proyek/{id}', \App\Livewire\Pemilik\DetilProyek::class)->name('pemilik.detilproyek');
-    Route::get('/pemilik/proyek/tugas', \App\Livewire\Pemilik\Tugas::class)->name('pemilik.tugas');
+    Route::get('/pemilik/proyek/{id}/tugas', \App\Livewire\Pemilik\TugasProyek::class)->name('pemilik.tugas');
     Route::get('/pemilik/proyek/kalender', \App\Livewire\Pemilik\Kalender::class)->name('pemilik.kalender');
     Route::get('/pemilik/rapat', \App\Livewire\Pemilik\Rapat::class)->name('pemilik.rapat');
     Route::get('/pemilik/pembayaran', \App\Livewire\Pemilik\Pembayaran::class)->name('pemilik.pembayaran');
     Route::get('/pemilik/order', \App\Livewire\Pemilik\Order::class)->name('pemilik.order');
+    Route::get('/pemilik/profile', \App\Livewire\Pemilik\Profile::class)->name('pemilik.profile');
 });
 

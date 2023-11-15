@@ -3,14 +3,17 @@
 namespace App\Livewire\Auth;
 
 use App\Models\User;
-use DateTime;
+
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Layout;
 
 #[Layout('layouts.guest')]
 class Registrasi extends Component
 {
+    use WithFileUploads;
+
     #[Rule('required|string')]
     public string $nama;
 
@@ -26,15 +29,22 @@ class Registrasi extends Component
     #[Rule('required')]
     public string $nohp;
 
+    #[Rule('required|image|mimes:jpeg,jpg,png')]
+    public $foto;
+
     public function registrasi()
     {
         $this->validate();
+
+        $this->foto->storeAs('public/foto', $this->foto->hashName());
+
         User::create([
             'name' => $this->nama,
             'email' => $this->email,
             'password' => bcrypt($this->password),
             'alamat' => $this->alamat,
             'nohp' => $this->nohp,
+            'foto' => $this->foto->hashName(),
             'role' => 'pemilik',
 
         ]);

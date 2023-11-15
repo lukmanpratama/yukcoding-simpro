@@ -223,16 +223,16 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown hidden-caret">
-                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#profile" aria-expanded="false">
                         <div class="avatar-sm">
-                            <img src="{{ asset('dashboard/assets/img/profile.jpg') }}" alt="dashboard." class="avatar-img rounded-circle">
+                            <img src="{{ asset('storage/foto/'.Auth::user()->foto) }}" alt="dashboard." class="avatar-img rounded-circle">
                         </div>
                     </a>
-                    <ul class="dropdown-menu dropdown-user animated fadeIn">
+                    <ul class="dropdown-menu dropdown-user animated fadeIn" id="profile">
                         <div class="dropdown-user-scroll scrollbar-outer">
                             <li>
                                 <div class="user-box">
-                                    <div class="avatar-lg"><img src="{{ asset('dashboard/assets/img/profile.jpg') }}" alt="image profile" class="avatar-img rounded"></div>
+                                    <div class="avatar-lg"><img src="{{ asset('storage/foto/'.Auth::user()->foto) }}" alt="image profile" class="avatar-img rounded"></div>
                                     <div class="u-text">
                                         <h4>{{Auth::user()->name}}</h4>
                                         <p class="text-muted">{{Auth::user()->email}}</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
@@ -241,11 +241,24 @@
                             </li>
                             <li>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">My Profile</a>
-                                <a class="dropdown-item" href="#">My Balance</a>
-                                <a class="dropdown-item" href="#">Inbox</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Account Setting</a>
+                                @if (auth()->user()->role=="admin")
+                                <a class="dropdown-item" wire:navigate href="/admin/profile">My Profile</a>
+                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                @endif
+                                @if (auth()->user()->role=="manajer")
+                                <a class="dropdown-item" wire:navigate href="/manajer/profile">My Profile</a>
+                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                @endif
+                                @if (auth()->user()->role=="pemilik")
+                                <a class="dropdown-item" wire:navigate href="/pemilik/profile">My Profile</a>
+                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                @endif
+                                @if (auth()->user()->role=="tim")
+                                <a class="dropdown-item" wire:navigate href="/tim/profile">My Profile</a>
+                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                @endif
+
+
                                 <div class="dropdown-divider"></div>
                                 <form action="{{route('auth.logout')}}" method="post">
                                     @csrf

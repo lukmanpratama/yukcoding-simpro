@@ -3,13 +3,13 @@
         <div class="sidebar-content">
             <div class="user">
                 <div class="avatar-sm float-left mr-2">
-                    <img src="{{ asset('dashboard/assets/img/profile.jpg') }}" alt="dashboard." class="avatar-img rounded-circle">
+                    <img src="{{ asset('storage/foto/'.Auth::user()->foto) }}" alt="dashboard." class="avatar-img rounded-circle">
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                         <span>
-                            Hizrian
-                            <span class="user-level">Administrator</span>
+                            {{Auth::user()->name}}
+                            <span class="user-level">{{Auth::user()->role}}</span>
                             <span class="caret"></span>
                         </span>
                     </a>

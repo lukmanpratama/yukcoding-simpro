@@ -30,6 +30,8 @@ class DetilProyek extends Component
         if($proyek){
             $this->detilproyek = $proyek;
         }
+
+
     }
 
     public function render()

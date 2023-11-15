@@ -2,8 +2,9 @@
 
 namespace App\Livewire\Pemilik;
 
-use Livewire\Component;
+use App\Models\User;
 use App\Models\Proyek;
+use Livewire\Component;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 
@@ -95,7 +96,7 @@ class ProyekPemilik extends Component
 
     public function render()
     {
-        $proyeks = Proyek::with('users')
+        $proyeks =  User::find(auth()->id())->proyeks()
         ->when($this->search, function ($search)
         {
             $search->where(function ($search)

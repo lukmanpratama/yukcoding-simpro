@@ -72,9 +72,16 @@
                                 @enderror
                             </div>
                             <div class="ud-form-group">
-                                <input wire:model="nohp" type="tel"  name="nohp"
+                                <input wire:model="nohp" type="tel" name="nohp"
                                     placeholder="No Hp xxxx-xxxx-xxxx">
                                 @error('nohp')
+                                    <small class="d-block mt-1 danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                            <div class="ud-form-group">
+                                <input wire:model="foto" type="file" name="file"
+                                    placeholder="Foto Profile">
+                                @error('foto')
                                     <small class="d-block mt-1 danger">{{ $message }}</small>
                                 @enderror
                             </div>

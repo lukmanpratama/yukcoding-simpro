@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex align-items-center">
-                            <h4 class="card-title">Add Row</h4>
+                            <h4 class="card-title">Daftar proyek</h4>
 
                         </div>
                     </div>
@@ -115,11 +115,12 @@
                                     @foreach ($proyeks as $proyek)
                                         <tr wire:key="{{ $proyek->id }}">
                                             <td>{{ $loop->index + $proyeks->firstItem() }}</a></td>
-                                            <td><a href="/pemilik/proyek/{{ $proyek->id }}" wire:navigate>{{ $proyek->nama_proyek }}</a></td>
+                                            <td><a href="/pemilik/proyek/{{ $proyek->id }}"  title="Detil Proyek" wire:navigate>{{ $proyek->nama_proyek }}</a></td>
                                             <td>
                                                 @foreach ($proyek->users->where('role', '=', 'pemilik') as $user)
-                                                    <button
-                                                        class="btn btn-sm btn-primary me-2">{{ $user->name }}</button>
+                                                <div class="avatar-sm">
+                                                    <img src="{{ asset('storage/foto/'.$user->foto) }}" alt="dashboard." class="avatar-img rounded-circle">
+                                                </div>
                                                 @endforeach
                                             </td>
                                             <td>
