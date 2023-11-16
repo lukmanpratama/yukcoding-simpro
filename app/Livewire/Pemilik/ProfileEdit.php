@@ -38,15 +38,15 @@ class ProfileEdit extends Component
     {
 
         $this->profile_foto->storeAs('public/foto', $this->profile_foto->hashName());
-            $profile_edit = User::findOrFail($this->userId);
-            $profile_edit->update([
-                'name' => $this->profile_nama,
-                'email' => $this->profile_email,
-                'alamat' => $this->profile_alamat,
-                'nohp'=> $this->profile_nohp,
-                'foto'=> $this->profile_foto->hashName(),
+        $profile_edit = User::findOrFail($this->userId);
+        $profile_edit->update([
+            'name' => $this->profile_nama,
+            'email' => $this->profile_email,
+            'alamat' => $this->profile_alamat,
+            'nohp'=> $this->profile_nohp,
+            'foto'=> $this->profile_foto->hashName(),
             ]);
-            session()->flash('success', 'Post updated successfully.');
+        session()->flash('success', 'Post updated successfully.');
 
     }
 
