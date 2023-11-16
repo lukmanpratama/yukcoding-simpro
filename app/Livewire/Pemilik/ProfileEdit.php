@@ -2,24 +2,43 @@
 
 namespace App\Livewire\Pemilik;
 
+use App\Models\User;
 use Livewire\Component;
+
 
 class ProfileEdit extends Component
 {
+    public $profile_nama;
+    public $profile_email;
+    public $profile_alamat;
+    public $profile_nohp;
+    public $userId;
+
+    public function mount()
+    {
+        //get post
+        $profile_edit = User::find(auth()->user()->id);
+
+        $this->userId = $profile_edit->id;
+        $this->profile_nama = $profile_edit->name;
+        $this->profile_email = $profile_edit->email;
+        $this->profile_alamat = $profile_edit->alamat;
+        $this->profile_nohp = $profile_edit->hohp;
+    }
+
+
     public function update()
     {
-        if ($this->tugasId) {
-            $tugas = Job::findOrFail($this->tugasId);
-            $tugas->update([
-                'nama_tugas' => $this->nama_tugas,
-
-                'deskripsi_tugas' => $this->deskripsi_tugas,
+            $profile_edit = User::findOrFail($this->userId);
+            $profile_edit->update([
+                'name' => $this->profile_nama,
+                'email' => $this->profile_email,
+                'alamat' => $this->profile_alamat,
                 'progres_tugas'=>$this->progres_tugas,
             ]);
             session()->flash('success', 'Post updated successfully.');
             $this->closeModal();
             $this->reset('nama_tugas','deskripsi_tugas', 'progres_tugas', 'tugasId');
-        }
     }
 
     public function render()

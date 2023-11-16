@@ -5,10 +5,10 @@
             <ul class="breadcrumbs">
                 <ul class="nav nav-line nav-color-secondary">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/pemilik/profile" wire:navigate>Lihat Profile</a>
+                        <a class="nav-link" href="/pemilik/profile" wire:navigate>Lihat Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/pemilik/profile/edit" wire:navigate>Edit Profile</a>
+                        <a class="nav-link active" href="/pemilik/profile/edit" wire:navigate>Edit Profile</a>
                     </li>
                 </ul>
             </ul>
@@ -31,10 +31,10 @@
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <form wire:submit.prevent="{{ $tugasId ? 'update' : 'store' }}">
+                                <form wire:submit.prevent="update">
                                     <div class="form-group">
                                         <label for="title">Nama Tugas</label>
-                                        <input type="text" wire:model="nama_tugas" class="form-control"
+                                        <input type="text" wire:model="profile_nama" class="form-control"
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <div class="form-group">
@@ -48,7 +48,7 @@
                                             id="progres_tugas" placeholder="Enter post title">
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-4">
-                                        {{ $tugasId ? 'Update' : 'Buat' }}
+                                        Update
                                     </button>
                                     <button type="button" wire:click="closeModal"
                                         class="btn btn-secondary mt-4">Close</button>
