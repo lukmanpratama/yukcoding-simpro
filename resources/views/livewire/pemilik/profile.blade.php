@@ -34,6 +34,12 @@
                             <div class="col-md-8">
                                 <h4><b>Nama Pengguna</b></h4>
                                 <p>{{Auth::user()->name}}</p>
+                                <h4><b>Email</b></h4>
+                                <p>{{Auth::user()->email}}</p>
+                                <h4><b>Alamat</b></h4>
+                                <p>{{Auth::user()->alamat}}</p>
+                                <h4><b>No Handphone</b></h4>
+                                <p>{{Auth::user()->nohp}}</p>
                             </div>
 
                         </div>
