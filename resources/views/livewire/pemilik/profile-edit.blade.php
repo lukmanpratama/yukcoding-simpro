@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="title">Nama Tugas</label>
-                                        <input type="text" wire:model="profile_lamat" class="form-control"
+                                        <input type="text" wire:model="profile_alamat" class="form-control"
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <div class="form-group">
@@ -58,14 +58,6 @@
                                     <button type="button" wire:click="closeModal"
                                         class="btn btn-secondary mt-4">Close</button>
                                 </form>
-                                <h4><b>Nama Pengguna</b></h4>
-                                <p>{{Auth::user()->name}}</p>
-                                <h4><b>Email</b></h4>
-                                <p>{{Auth::user()->email}}</p>
-                                <h4><b>Alamat</b></h4>
-                                <p>{{Auth::user()->alamat}}</p>
-                                <h4><b>No Handphone</b></h4>
-                                <p>{{Auth::user()->nohp}}</p>
                             </div>
 
                         </div>

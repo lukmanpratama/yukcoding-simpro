@@ -23,7 +23,7 @@ class ProfileEdit extends Component
         $this->profile_nama = $profile_edit->name;
         $this->profile_email = $profile_edit->email;
         $this->profile_alamat = $profile_edit->alamat;
-        $this->profile_nohp = $profile_edit->hohp;
+        $this->profile_nohp = $profile_edit->nohp;
     }
 
 
