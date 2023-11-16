@@ -8,9 +8,8 @@
                         <a class="nav-link active" href="/pemilik/profile" wire:navigate>Lihat Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/pemilik/proyek" wire:navigate>Edit Profile</a>
+                        <a class="nav-link" href="/pemilik/profile/edit" wire:navigate>Edit Profile</a>
                     </li>
-
                 </ul>
             </ul>
         </div>
