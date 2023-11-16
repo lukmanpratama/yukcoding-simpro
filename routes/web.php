@@ -28,15 +28,19 @@ Route::group(['middleware' => ['auth', 'cekrole:admin']], function(){
     Route::get('/admin/proyek', \App\Livewire\Admin\Proyek::class)->name('admin.proyek');
     Route::get('/admin/pembayaran', \App\Livewire\Admin\Pembayaran::class)->name('admin.pembayaran');
     Route::get('/admin/profile', \App\Livewire\Admin\Profile::class)->name('admin.profile');
+    Route::get('/admin/profile/edit', \App\Livewire\Admin\ProfileEdit::class)->name('admin.profile.edit');
 });
 Route::group(['middleware' => ['auth', 'cekrole:manajer']], function(){
     Route::get('/manajer', \App\Livewire\Manajer\Beranda::class)->name('manajer.beranda');
     Route::get('/manajer/proyek', \App\Livewire\Manajer\Proyek::class)->name('manajer.proyek');
     Route::get('/manajer/profile', \App\Livewire\Manajer\Profile::class)->name('manajer.profile');
+    Route::get('/manajer/profile/edit', \App\Livewire\Manajer\ProfileEdit::class)->name('manajer.profile.edit');
 });
 Route::group(['middleware' => ['auth', 'cekrole:tim']], function(){
     Route::get('/tim', \App\Livewire\Tim\Beranda::class)->name('tim.beranda');
     Route::get('/tim/proyek', \App\Livewire\Tim\Proyek::class)->name('tim.proyek');
+    Route::get('/tim/profile', \App\Livewire\Tim\Profile::class)->name('tim.profile');
+    Route::get('/tim/profile/edit', \App\Livewire\Tim\ProfileEdit::class)->name('tim.profile.edit');
 });
 Route::group(['middleware' => ['auth', 'cekrole:pemilik']], function(){
     Route::get('/pemilik', \App\Livewire\Pemilik\Beranda::class)->name('pemilik.beranda');
@@ -48,5 +52,6 @@ Route::group(['middleware' => ['auth', 'cekrole:pemilik']], function(){
     Route::get('/pemilik/pembayaran', \App\Livewire\Pemilik\Pembayaran::class)->name('pemilik.pembayaran');
     Route::get('/pemilik/order', \App\Livewire\Pemilik\Order::class)->name('pemilik.order');
     Route::get('/pemilik/profile', \App\Livewire\Pemilik\Profile::class)->name('pemilik.profile');
+    Route::get('/pemilik/profile/edit', \App\Livewire\Pemilik\ProfileEdit::class)->name('pemilik.profile.edit');
 });
 
