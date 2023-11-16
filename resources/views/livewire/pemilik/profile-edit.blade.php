@@ -38,18 +38,23 @@
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <div class="form-group">
-                                        <label for="title">Nama Tugas</label>
+                                        <label for="title">Email</label>
                                         <input type="text" wire:model="profile_email" class="form-control"
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <div class="form-group">
-                                        <label for="title">Nama Tugas</label>
+                                        <label for="title">Alamat</label>
                                         <input type="text" wire:model="profile_alamat" class="form-control"
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <div class="form-group">
-                                        <label for="title">Nama Tugas</label>
+                                        <label for="title">Nomor Handphone</label>
                                         <input type="text" wire:model="profile_nohp" class="form-control"
+                                            id="nama_tugas" placeholder="Enter post title">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="title">Foto Profile</label>
+                                        <input type="file" wire:model="profile_foto" class="form-control"
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-4">

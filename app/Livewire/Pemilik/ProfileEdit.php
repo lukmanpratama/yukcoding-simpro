@@ -12,6 +12,7 @@ class ProfileEdit extends Component
     public $profile_email;
     public $profile_alamat;
     public $profile_nohp;
+    public $profile_foto;
     public $userId;
 
     public function mount()
@@ -24,17 +25,20 @@ class ProfileEdit extends Component
         $this->profile_email = $profile_edit->email;
         $this->profile_alamat = $profile_edit->alamat;
         $this->profile_nohp = $profile_edit->nohp;
+        $this->profile_foto = $profile_edit->foto;
     }
 
 
     public function update()
     {
+        $this->profile_foto->storeAs('public/foto', $this->profile_foto->hashName());
             $profile_edit = User::findOrFail($this->userId);
             $profile_edit->update([
                 'name' => $this->profile_nama,
                 'email' => $this->profile_email,
                 'alamat' => $this->profile_alamat,
-                'nohp'=>$this->profile_nohp,
+                'nohp'=> $this->profile_nohp,
+                'foto'=> $this->profile_foto,
             ]);
             session()->flash('success', 'Post updated successfully.');
 

@@ -243,11 +243,11 @@
                                 <div class="dropdown-divider"></div>
                                 @if (auth()->user()->role=="admin")
                                 <a class="dropdown-item" wire:navigate href="/admin/profile">My Profile</a>
-                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                <a class="dropdown-item" wire:navigate href="/admin/profile/edit">Edit Profile</a>
                                 @endif
                                 @if (auth()->user()->role=="manajer")
                                 <a class="dropdown-item" wire:navigate href="/manajer/profile">My Profile</a>
-                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                <a class="dropdown-item" wire:navigate href="/manajer/profile/edit">Edit Profile</a>
                                 @endif
                                 @if (auth()->user()->role=="pemilik")
                                 <a class="dropdown-item" wire:navigate href="/pemilik/profile">My Profile</a>
