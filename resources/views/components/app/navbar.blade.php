@@ -251,11 +251,11 @@
                                 @endif
                                 @if (auth()->user()->role=="pemilik")
                                 <a class="dropdown-item" wire:navigate href="/pemilik/profile">My Profile</a>
-                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                <a class="dropdown-item" wire:navigate href="/pemilik/profile/edit">Edit Profile</a>
                                 @endif
                                 @if (auth()->user()->role=="tim")
                                 <a class="dropdown-item" wire:navigate href="/tim/profile">My Profile</a>
-                                <a class="dropdown-item" wire:navigate href="#">Edit Profile</a>
+                                <a class="dropdown-item" wire:navigate href="/tim/profile/edit">Edit Profile</a>
                                 @endif
 
 

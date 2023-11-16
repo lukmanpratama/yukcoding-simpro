@@ -4,14 +4,19 @@ namespace App\Livewire\Pemilik;
 
 use App\Models\User;
 use Livewire\Component;
+use Livewire\Attributes\Rule;
+use Livewire\WithFileUploads;
 
 
 class ProfileEdit extends Component
 {
+    use WithFileUploads;
+
     public $profile_nama;
     public $profile_email;
     public $profile_alamat;
     public $profile_nohp;
+    #[Rule('required|image|mimes:jpeg,jpg,png')]
     public $profile_foto;
     public $userId;
 
@@ -31,6 +36,7 @@ class ProfileEdit extends Component
 
     public function update()
     {
+
         $this->profile_foto->storeAs('public/foto', $this->profile_foto->hashName());
             $profile_edit = User::findOrFail($this->userId);
             $profile_edit->update([
@@ -38,7 +44,7 @@ class ProfileEdit extends Component
                 'email' => $this->profile_email,
                 'alamat' => $this->profile_alamat,
                 'nohp'=> $this->profile_nohp,
-                'foto'=> $this->profile_foto,
+                'foto'=> $this->profile_foto->hashName(),
             ]);
             session()->flash('success', 'Post updated successfully.');
 
