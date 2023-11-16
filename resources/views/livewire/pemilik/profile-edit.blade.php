@@ -38,14 +38,19 @@
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <div class="form-group">
-                                        <label for="body">Deskripsi</label>
-                                        <textarea wire:model="deskripsi_tugas" class="form-control" id="deskripsi_tugas" rows="4"
-                                            placeholder="Enter post body"></textarea>
+                                        <label for="title">Nama Tugas</label>
+                                        <input type="text" wire:model="profile_email" class="form-control"
+                                            id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <div class="form-group">
-                                        <label for="title">Progres (%)</label>
-                                        <input type="text" wire:model="progres_tugas" class="form-control"
-                                            id="progres_tugas" placeholder="Enter post title">
+                                        <label for="title">Nama Tugas</label>
+                                        <input type="text" wire:model="profile_lamat" class="form-control"
+                                            id="nama_tugas" placeholder="Enter post title">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="title">Nama Tugas</label>
+                                        <input type="text" wire:model="profile_nohp" class="form-control"
+                                            id="nama_tugas" placeholder="Enter post title">
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-4">
                                         Update

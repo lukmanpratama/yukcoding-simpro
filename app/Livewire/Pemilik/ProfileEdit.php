@@ -34,11 +34,10 @@ class ProfileEdit extends Component
                 'name' => $this->profile_nama,
                 'email' => $this->profile_email,
                 'alamat' => $this->profile_alamat,
-                'progres_tugas'=>$this->progres_tugas,
+                'nohp'=>$this->profile_nohp,
             ]);
             session()->flash('success', 'Post updated successfully.');
-            $this->closeModal();
-            $this->reset('nama_tugas','deskripsi_tugas', 'progres_tugas', 'tugasId');
+
     }
 
     public function render()
