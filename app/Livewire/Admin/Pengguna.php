@@ -43,6 +43,7 @@ class Pengguna extends Component
     public function store()
     {
         $this->validate();
+        $this->foto->storeAs('public/foto', $this->foto->hashName());
         $pengguna = User::create([
             'name' => $this->nama,
             'email' => $this->email,
@@ -68,6 +69,7 @@ class Pengguna extends Component
         $this->password = bcrypt($pengguna->password);
         $this->alamat = $pengguna->alamat;
         $this->nohp = $pengguna->nohp;
+        $this->foto = $pengguna->foto;
         $this->role = $pengguna->role;
 
         $this->openModal();
