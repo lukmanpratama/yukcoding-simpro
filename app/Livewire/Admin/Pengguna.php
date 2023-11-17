@@ -101,6 +101,17 @@ class Pengguna extends Component
 
     public function render()
     {
-        return view('livewire.admin.pengguna');
+        $penggunas = User::query()
+        ->when($this->search, function ($search)
+            {
+                $search->where(function ($search)
+                    {
+                        $search->where('name', 'like', '%'.$this->search.'%');
+                    }
+                );
+
+            }, fn ($search) => $search->latest()
+        )->paginate ($this->limit);
+        return view('livewire.admin.pengguna',['penggunas' => $penggunas]);
     }
 }
