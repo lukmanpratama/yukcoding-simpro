@@ -33,7 +33,7 @@
                             <div class="col-md-8">
                                 <form wire:submit.prevent="update">
                                     <div class="form-group">
-                                        <label for="title">Nama Tugas</label>
+                                        <label for="title">Nama</label>
                                         <input type="text" wire:model="profile_nama" class="form-control"
                                             id="nama_tugas" placeholder="Enter post title">
                                     </div>
