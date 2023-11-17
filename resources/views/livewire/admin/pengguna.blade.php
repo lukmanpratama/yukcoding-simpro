@@ -25,11 +25,11 @@
                     <div class="card-body">
                         <button wire:click="create" class="btn btn-primary btn-round ml-auto">
                             <i class="fa fa-plus"></i>
-                            Add Rowb
+                            Add Row
                         </button>
                         <!-- Modal -->
                         @if ($isOpen)
-                            <div class="modal show" tabindex="-1" role="dialog" style="display: block;">
+                            <div class="modal show" id="exampleModalLong" tabindex="-1" role="dialog" style="display: block;">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content text-bg-dark">
 
@@ -78,7 +78,7 @@
                                                         id="nama_tugas" placeholder="Enter post title">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary mt-4">
-                                                    {{ $proyekId ? 'Update' : 'Create' }}
+                                                    {{ $penggunaId ? 'Update' : 'Create' }}
                                                 </button>
                                                 <button type="button" wire:click="closeModal"
                                                     class="btn btn-secondary mt-4">Close</button>

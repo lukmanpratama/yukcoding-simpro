@@ -35,7 +35,6 @@ class ProfileEdit extends Component
 
     public function update()
     {
-
         $this->profile_foto->storeAs('public/foto', $this->profile_foto->hashName());
         $profile_edit = User::findOrFail($this->userId);
         $profile_edit->update([
