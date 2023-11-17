@@ -10,6 +10,8 @@ use Livewire\WithFileUploads;
 
 class Pengguna extends Component
 {
+    use \Livewire\WithPagination;
+    use WithFileUploads;
     public $nama;
     public $email;
     public $password;
