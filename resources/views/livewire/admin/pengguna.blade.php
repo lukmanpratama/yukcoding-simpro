@@ -48,19 +48,34 @@
 
                                             <form wire:submit.prevent="{{ $penggunaId ? 'update' : 'store' }}">
                                                 <div class="form-group">
-                                                    <label for="title">Nama Proyek</label>
-                                                    <input type="text" wire:model="nama_proyek" class="form-control"
-                                                        id="nama_proyek" placeholder="Enter post title">
+                                                    <label for="title">Nama</label>
+                                                    <input type="text" wire:model="nama" class="form-control"
+                                                        id="nama_tugas" placeholder="Enter post title">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="body">Deskripsi</label>
-                                                    <textarea wire:model="deskripsi_proyek" class="form-control" id="deskripsi_proyek" rows="4"
-                                                        placeholder="Enter post body"></textarea>
+                                                    <label for="title">Email</label>
+                                                    <input type="text" wire:model="email" class="form-control"
+                                                        id="nama_tugas" placeholder="Enter post title">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="title">Jenis Proyek</label>
-                                                    <input type="text" wire:model="jenis_proyek" class="form-control"
-                                                        id="jenis_proyek" placeholder="Enter post title">
+                                                    <label for="title">Password</label>
+                                                    <input type="text" wire:model="password" class="form-control"
+                                                        id="nama_tugas" placeholder="Enter post title">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="title">Alamat</label>
+                                                    <input type="text" wire:model="alamat" class="form-control"
+                                                        id="nama_tugas" placeholder="Enter post title">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="title">Nomor Handphone</label>
+                                                    <input type="text" wire:model="nohp" class="form-control"
+                                                        id="nama_tugas" placeholder="Enter post title">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="title">Foto Profile</label>
+                                                    <input type="file" wire:model="foto" class="form-control"
+                                                        id="nama_tugas" placeholder="Enter post title">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary mt-4">
                                                     {{ $proyekId ? 'Update' : 'Create' }}
