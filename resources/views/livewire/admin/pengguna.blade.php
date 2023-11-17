@@ -104,35 +104,24 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Name proyek</th>
-                                        <th>Owner</th>
-                                        <th>Manager</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
                                         <th>Created At</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($proyeks as $proyek)
-                                        <tr wire:key="{{ $proyek->id }}">
-                                            <td>{{ $loop->index + $proyeks->firstItem() }}</a></td>
-                                            <td><a href="/pemilik/proyek/{{ $proyek->id }}"  title="Detil Proyek" wire:navigate>{{ $proyek->nama_proyek }}</a></td>
-                                            <td>
-                                                @foreach ($proyek->users->where('role', '=', 'pemilik') as $user)
-                                                <div class="avatar-sm">
-                                                    <img src="{{ asset('storage/foto/'.$user->foto) }}" alt="dashboard." class="avatar-img rounded-circle">
-                                                </div>
-                                                @endforeach
-                                            </td>
-                                            <td>
-                                                @foreach ($proyek->users->where('role', '=', 'manajer') as $user)
-                                                    <button
-                                                        class="btn btn-sm btn-primary me-2">{{ $user->name }}</button>
-                                                @endforeach
-                                            </td>
-                                            <td>{{ $proyek->created_at->format('d F, Y') }}</td>
+                                    @foreach ($penggunas as $pengguna)
+                                        <tr wire:key="{{ $pengguna->id }}">
+                                            <td>{{ $loop->index + $penggunas->firstItem() }}</a></td>
+                                            <td>{{ $pengguna->name }}</td>
+                                            <td>{{ $pengguna->email }}</td>
+                                            <td>{{ $pengguna->role }}</td>
+                                            <td>{{ $pengguna->created_at->format('d F, Y') }}</td>
                                             <td>
                                                 <div class="form-button-action">
-                                                    <button wire:click="edit({{ $proyek->id }})" type="button"
+                                                    <button wire:click="edit({{ $pengguna->id }})" type="button"
                                                         data-toggle="tooltip" title=""
                                                         class="btn btn-link btn-primary btn-lg"
                                                         data-original-title="Edit Task">
@@ -140,7 +129,7 @@
                                                     </button>
                                                     <button
                                                         onclick="return confirm('Are you sure you want to delete this item?') || event.stopImmediatePropagation()"
-                                                        wire:click="delete({{ $proyek->id }})" type="button"
+                                                        wire:click="delete({{ $pengguna->id }})" type="button"
                                                         data-toggle="tooltip" title=""
                                                         class="btn btn-link btn-danger" data-original-title="Remove">
                                                         <i class="fa fa-times"></i>
@@ -151,7 +140,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <x-app.pagination :items="$proyeks" />
+                            <x-app.pagination :items="$penggunas" />
                         </div>
                     </div>
                 </div>
