@@ -12,12 +12,19 @@ class Pengguna extends Component
 {
     use \Livewire\WithPagination;
     use WithFileUploads;
+    #[Rule('required|min:3')]
     public $nama;
+    #[Rule('required|min:3')]
     public $email;
+    #[Rule('required|min:3')]
     public $password;
+    #[Rule('required|min:3')]
     public $alamat;
+    #[Rule('required|min:3')]
     public $nohp;
+    #[Rule('required|min:3')]
     public $foto;
+    #[Rule('required|min:3')]
     public $role;
 
     public string $search='';

@@ -29,7 +29,8 @@
                         </button>
                         <!-- Modal -->
                         @if ($isOpen)
-                            <div class="modal show" id="exampleModalLong" tabindex="-1" role="dialog" style="display: block;">
+                            <div class="modal show" id="exampleModalLong" tabindex="-1" role="dialog"
+                                style="display: block;">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content text-bg-dark">
 
@@ -59,23 +60,17 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="title">Password</label>
-                                                    <input type="text" wire:model="password" class="form-control"
+                                                    <input type="password" wire:model="password" class="form-control"
                                                         id="nama_tugas" placeholder="Enter post title">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="title">Alamat</label>
-                                                    <input type="text" wire:model="alamat" class="form-control"
-                                                        id="nama_tugas" placeholder="Enter post title">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="title">Nomor Handphone</label>
-                                                    <input type="text" wire:model="nohp" class="form-control"
-                                                        id="nama_tugas" placeholder="Enter post title">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="title">Foto Profile</label>
-                                                    <input type="file" wire:model="foto" class="form-control"
-                                                        id="nama_tugas" placeholder="Enter post title">
+                                                    <label for="title">Role</label>
+                                                    <select class="form-control" wire:model="role"
+                                                        id="exampleFormControlSelect1">
+                                                        <option>Manajer</option>
+                                                        <option>Admin</option>
+                                                        <option>Tim</option>
+                                                    </select>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary mt-4">
                                                     {{ $penggunaId ? 'Update' : 'Create' }}
